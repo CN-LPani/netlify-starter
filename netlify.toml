@@ -1,5 +1,4 @@
 [functions]
   directory = "netlify/functions/"
-  node_bundler = "esbuild"
-  # 将默认的 10 秒超时提升到最大支持的 26 秒[reference:7][reference:8]
+[functions."comment"]
   timeout = 26
