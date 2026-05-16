@@ -1,11 +1,6 @@
 // netlify/functions/comment.js
 const { handler: walineHandler } = require('@waline/vercel');
 
-// 确保环境变量存在 (检查我们设置的核心变量)
-if (!process.env.MONGODB_URI) {
-    console.error('环境变量 MONGODB_URI 未设置！');
-}
-
 // 关键点：覆盖默认的连接池设置
 process.env.MONGO_OPTIONS = JSON.stringify({
     // 限制最大连接数为 1，防止在无服务器环境中产生过多连接[reference:5]
