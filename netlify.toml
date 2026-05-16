@@ -1,4 +1,2 @@
 [functions]
   directory = "netlify/functions/"
-[functions."comment"]
-  timeout = 26
